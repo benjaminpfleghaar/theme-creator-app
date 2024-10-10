@@ -14,3 +14,31 @@
 		outline: 2px solid var(--color-primary);
 	}
 }
+
+.button__icon {
+	border: 0;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border-radius: 6px;
+	background: var(--color-delete) url("/delete.svg") center no-repeat;
+
+	&:disabled {
+		cursor: default;
+		background-color: var(--color-secondary);
+	}
+
+	&:focus-visible {
+		outline-offset: 2px;
+		outline: 2px solid var(--color-primary);
+	}
+
+	.button__icon-text--hidden {
+		top: auto;
+		width: 1px;
+		height: 1px;
+		left: -10000px;
+		overflow: hidden;
+		position: absolute;
+	}
+}

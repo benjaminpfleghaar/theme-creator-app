@@ -4,7 +4,6 @@ import { useState } from "react";
 import Input from "@/components/Input/Input";
 import Button from "@/components/Button/Button";
 import "@/components/ThemeHeader/ThemeHeader.scss";
-import IconButton from "@/components/IconButton/IconButton";
 
 export default function ThemeHeader() {
 	const [toggle, setToggle] = useState(false);
@@ -19,7 +18,9 @@ export default function ThemeHeader() {
 						<Button type="button" onClick={() => setToggle(false)}>
 							Cancel
 						</Button>
-						<IconButton disabled />
+						<Button type="icon" disabled>
+							Delete
+						</Button>
 					</form>
 					<Button type="button">Add Color</Button>
 				</header>

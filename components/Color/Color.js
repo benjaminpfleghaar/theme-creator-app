@@ -2,7 +2,6 @@ import "@/components/Color/Color.scss";
 import Input from "@/components/Input/Input";
 import Button from "@/components/Button/Button";
 import ColorInput from "@/components/ColorInput/ColorInput";
-import IconButton from "@/components/IconButton/IconButton";
 
 export default function Color({ role, color }) {
 	return (
@@ -19,7 +18,7 @@ export default function Color({ role, color }) {
 				<section className="color__form-buttons">
 					<Button type="submit">Save</Button>
 					<Button type="button">Cancel</Button>
-					<IconButton />
+					<Button type="icon">Delete</Button>
 				</section>
 			</form>
 		</section>
