@@ -1,13 +1,8 @@
 .button {
+	border: 0;
 	height: 40px;
-	padding: 0 16px;
 	cursor: pointer;
-	font-weight: 600;
 	border-radius: 6px;
-	color: var(--color-primary);
-	font-size: var(--font-size-s);
-	background-color: var(--color-white);
-	border: 1px solid var(--color-border);
 
 	&:focus-visible {
 		outline-offset: 2px;
@@ -15,12 +10,17 @@
 	}
 }
 
-.button__icon {
-	border: 0;
+.button--primary {
+	padding: 0 16px;
+	font-weight: 600;
+	color: var(--color-primary);
+	font-size: var(--font-size-s);
+	background-color: var(--color-white);
+	border: 1px solid var(--color-border);
+}
+
+.button--icon {
 	width: 40px;
-	height: 40px;
-	cursor: pointer;
-	border-radius: 6px;
 	background: var(--color-delete) url("/delete.svg") center no-repeat;
 
 	&:disabled {
@@ -28,12 +28,7 @@
 		background-color: var(--color-secondary);
 	}
 
-	&:focus-visible {
-		outline-offset: 2px;
-		outline: 2px solid var(--color-primary);
-	}
-
-	.button__icon-text--hidden {
+	.button__text--hidden {
 		top: auto;
 		width: 1px;
 		height: 1px;

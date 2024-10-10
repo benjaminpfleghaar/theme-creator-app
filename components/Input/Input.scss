@@ -1,13 +1,37 @@
-.input__text {
-	width: 132px;
+.input {
 	height: 40px;
-	padding: 0 12px;
 	border-radius: 6px;
-	font-size: var(--font-size-s);
-	border: 1px solid var(--color-border);
 
 	&:focus-visible {
 		outline-offset: 2px;
 		outline: 2px solid var(--color-primary);
+	}
+}
+
+.input--text {
+	width: 132px;
+	padding: 0 12px;
+	font-size: var(--font-size-s);
+	border: 1px solid var(--color-border);
+}
+
+.input--color {
+	width: 40px;
+	padding: 12px;
+	cursor: pointer;
+	background-color: var(--color-white);
+	border: 1px solid var(--color-border);
+
+	&::-webkit-color-swatch-wrapper {
+		padding: 0;
+	}
+	&::-webkit-color-swatch {
+		border: 0;
+		border-radius: 50%;
+	}
+	&::-moz-color-swatch,
+	&::-moz-focus-inner {
+		border: 0;
+		border-radius: 50%;
 	}
 }

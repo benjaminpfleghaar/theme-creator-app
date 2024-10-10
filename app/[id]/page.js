@@ -1,7 +1,7 @@
 import "./page.scss";
 import Color from "@/components/Color/Color";
 import Header from "@/components/Header/Header";
-import ThemeHeader from "@/components/ThemeHeader/ThemeHeader";
+import Headline from "@/components/Headline/Headline";
 
 export function generateMetadata() {
 	return {
@@ -14,7 +14,7 @@ export default function Theme() {
 		<>
 			<Header />
 			<main className="theme">
-				<ThemeHeader />
+				<Headline />
 				<section className="theme__colors">
 					<Color role="Primary" color="#003049" />
 					<Color role="Secondary" color="#d62828" />
