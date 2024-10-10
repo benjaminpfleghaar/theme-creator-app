@@ -1,0 +1,35 @@
+.color {
+	height: 240px;
+	padding: 16px;
+	display: flex;
+	border-radius: 12px;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.color__title {
+		display: flex;
+		flex-direction: column;
+
+		.color__title--small {
+			font-size: var(--font-size-xs);
+		}
+	}
+
+	.color__form {
+		padding: 8px;
+		display: flex;
+		border-radius: 12px;
+		justify-content: space-between;
+		background-color: var(--color-white);
+
+		.color__form-fields {
+			gap: 8px;
+			display: flex;
+		}
+
+		.color__form-buttons {
+			gap: 8px;
+			display: flex;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+.input__color {
+	width: 40px;
+	height: 40px;
+	padding: 12px;
+	cursor: pointer;
+	border-radius: 6px;
+	background-color: var(--color-white);
+	border: 1px solid var(--color-border);
+
+	&::-webkit-color-swatch-wrapper {
+		padding: 0;
+	}
+	&::-webkit-color-swatch {
+		border: 0;
+		border-radius: 50%;
+	}
+	&::-moz-color-swatch,
+	&::-moz-focus-inner {
+		border: 0;
+		border-radius: 50%;
+	}
+
+	&:focus-visible {
+		outline-offset: 2px;
+		outline: 2px solid var(--color-primary);
+	}
+}

@@ -1,0 +1,16 @@
+.theme__header {
+	display: flex;
+	margin-bottom: 72px;
+	align-items: center;
+	justify-content: space-between;
+
+	.theme__headline {
+		cursor: pointer;
+		font-size: var(--font-size-l);
+	}
+
+	.theme__form {
+		gap: 8px;
+		display: flex;
+	}
+}

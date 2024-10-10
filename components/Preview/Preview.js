@@ -5,10 +5,10 @@ export default function Preview() {
 	return (
 		<section className="theme__preview">
 			<Link href="/" title="Default Theme" className="theme__preview-link">
-				<div style={{ backgroundColor: "red" }}></div>
-				<div style={{ backgroundColor: "green" }}></div>
-				<div style={{ backgroundColor: "blue" }}></div>
-				<div style={{ backgroundColor: "yellow" }}></div>
+				<div style={{ backgroundColor: "#003049" }}></div>
+				<div style={{ backgroundColor: "#d62828" }}></div>
+				<div style={{ backgroundColor: "#f77f00" }}></div>
+				<div style={{ backgroundColor: "#fcbf49" }}></div>
 			</Link>
 			<h4 className="theme__preview-title">
 				Default Theme <small className="theme__preview-title--small">8 Colors</small>

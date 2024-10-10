@@ -1,0 +1,10 @@
+.theme {
+	max-width: 640px;
+	margin: 144px auto 72px;
+
+	.theme__colors {
+		gap: 16px;
+		display: flex;
+		flex-direction: column;
+	}
+}

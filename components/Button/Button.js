@@ -1,9 +1,9 @@
 import "@/components/Button/Button.scss";
 
-export default function Button({ label, type, disabled }) {
+export default function Button({ children, type, onClick }) {
 	return (
-		<button type={type} className="button" disabled={disabled}>
-			{label}
+		<button type={type} className="button" onClick={onClick}>
+			{children}
 		</button>
 	);
 }

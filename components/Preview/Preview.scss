@@ -11,6 +11,10 @@
 
 		& * {
 			flex-basis: 100%;
+			transition: flex-basis ease 0.2s;
+		}
+		& div:hover {
+			flex-basis: 200%;
 		}
 	}
 
@@ -19,8 +23,8 @@
 		flex-direction: column;
 
 		.theme__preview-title--small {
-			font-size: var(--font-size-s);
 			color: var(--color-secondary);
+			font-size: var(--font-size-xs);
 		}
 	}
 }
