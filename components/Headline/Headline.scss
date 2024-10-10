@@ -4,7 +4,7 @@
 	align-items: center;
 	justify-content: space-between;
 
-	.headline__title {
+	&__title {
 		font-size: var(--font-size-l);
 
 		&--pointer {
@@ -12,7 +12,7 @@
 		}
 	}
 
-	.headline__form {
+	&__form {
 		gap: 8px;
 		display: flex;
 	}

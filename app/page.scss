@@ -2,14 +2,13 @@
 	max-width: 640px;
 	margin: 144px auto 72px;
 
-	.main__themes {
+	&__themes,
+	&__colors {
 		gap: 40px;
 		display: flex;
 		flex-direction: column;
 	}
-	.main__colors {
+	&__colors {
 		gap: 16px;
-		display: flex;
-		flex-direction: column;
 	}
 }
