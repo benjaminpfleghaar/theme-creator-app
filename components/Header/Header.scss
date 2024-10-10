@@ -1,0 +1,18 @@
+.header {
+	top: 0;
+	width: 100%;
+	padding: 16px;
+	position: fixed;
+	backdrop-filter: blur(8px);
+	background-color: rgba(255, 255, 255, 0.8);
+	border-bottom: 1px solid var(--color-border);
+
+	.header__nav {
+		gap: 8px;
+		display: flex;
+
+		.header__nav-list {
+			display: contents;
+		}
+	}
+}

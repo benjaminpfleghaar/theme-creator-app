@@ -1,0 +1,26 @@
+.theme__preview {
+	gap: 16px;
+	display: flex;
+	flex-direction: column;
+
+	.theme__preview-link {
+		height: 160px;
+		display: flex;
+		overflow: hidden;
+		border-radius: 12px;
+
+		& * {
+			flex-basis: 100%;
+		}
+	}
+
+	.theme__preview-title {
+		display: flex;
+		flex-direction: column;
+
+		.theme__preview-title--small {
+			font-size: var(--font-size-s);
+			color: var(--color-secondary);
+		}
+	}
+}

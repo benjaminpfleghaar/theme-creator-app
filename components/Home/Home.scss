@@ -1,0 +1,21 @@
+.home {
+	max-width: 640px;
+	margin: 144px auto 72px;
+
+	.home__header {
+		display: flex;
+		margin-bottom: 40px;
+		align-items: center;
+		justify-content: space-between;
+
+		.home__headline {
+			font-size: var(--font-size-xl);
+		}
+	}
+
+	.home__themes {
+		gap: 40px;
+		display: flex;
+		flex-direction: column;
+	}
+}
