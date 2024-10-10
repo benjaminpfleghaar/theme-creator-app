@@ -15,7 +15,7 @@ export default function Theme() {
 			<Header />
 			<main className="main">
 				<Headline>Default Theme</Headline>
-				<section className="main__colors">
+				<section className="colors">
 					<Color role="Primary" color="#003049" />
 					<Color role="Secondary" color="#d62828" />
 					<Color role="Background" color="#f77f00" />

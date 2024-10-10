@@ -9,7 +9,7 @@ export default function Home() {
 			<Header />
 			<main className="main">
 				<Headline>3 Beautiful themes</Headline>
-				<section className="main__themes">
+				<section className="themes">
 					<Preview />
 					<Preview />
 					<Preview />
