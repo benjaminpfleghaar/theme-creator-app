@@ -1,18 +1,15 @@
-import "./page.scss";
+import "@/app/page.scss";
 import Header from "@/components/Header/Header";
-import Button from "@/components/Button/Button";
 import Preview from "@/components/Preview/Preview";
+import Headline from "@/components/Headline/Headline";
 
 export default function Home() {
 	return (
 		<>
 			<Header />
-			<main className="home">
-				<header className="home__header">
-					<h1 className="home__headline">3 Beautiful themes</h1>
-					<Button type="button">New Theme</Button>
-				</header>
-				<section className="home__themes">
+			<main className="main">
+				<Headline>3 Beautiful themes</Headline>
+				<section className="main__themes">
 					<Preview />
 					<Preview />
 					<Preview />

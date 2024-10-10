@@ -1,9 +1,9 @@
-.theme__preview {
+.preview {
 	gap: 16px;
 	display: flex;
 	flex-direction: column;
 
-	.theme__preview-link {
+	.preview__link {
 		height: 160px;
 		display: flex;
 		overflow: hidden;
@@ -18,11 +18,11 @@
 		}
 	}
 
-	.theme__preview-title {
+	.preview__title {
 		display: flex;
 		flex-direction: column;
 
-		.theme__preview-title--details {
+		&--details {
 			color: var(--color-secondary);
 			font-size: var(--font-size-xs);
 		}

@@ -1,15 +1,18 @@
-.theme__header {
+.headline {
 	display: flex;
 	margin-bottom: 72px;
 	align-items: center;
 	justify-content: space-between;
 
-	.theme__headline {
-		cursor: pointer;
+	.headline__title {
 		font-size: var(--font-size-l);
+
+		&--pointer {
+			cursor: pointer;
+		}
 	}
 
-	.theme__form {
+	.headline__form {
 		gap: 8px;
 		display: flex;
 	}
