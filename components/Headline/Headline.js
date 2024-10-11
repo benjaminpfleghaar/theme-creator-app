@@ -15,7 +15,7 @@ export default function Headline({ children }) {
 			<header className="headline">
 				{toggle ? (
 					<form className="headline__form">
-						<Input name="name" value="Default Theme" focus />
+						<Input name="name" value={children} focus />
 						<Button type="submit">Save</Button>
 						<Button type="button" onClick={() => setToggle(false)}>
 							Cancel
