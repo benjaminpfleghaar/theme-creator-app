@@ -34,7 +34,7 @@ export default function Color({ themeId, colorId, length, role, color }) {
 					<section className="color__form-section">
 						<Button type="submit">Save</Button>
 						<Button type="button" onClick={() => setToggle(false)}>
-							Cancel
+							Close
 						</Button>
 						<Button type="icon" onClick={() => deleteColor(themeId, colorId)} disabled={length < 2 ? true : false}>
 							Delete
