@@ -11,8 +11,9 @@ export default function Colors() {
 	const { id } = useParams();
 	const router = useRouter();
 	const { themes } = useThemeState();
+	const { name, colors } = themes.find((theme) => theme.id === id) || {};
+
 	if (!themes.find((theme) => theme.id === id)) return router.push("/");
-	const { name, colors } = themes.find((theme) => theme.id === id);
 
 	return (
 		<main className="colors">
