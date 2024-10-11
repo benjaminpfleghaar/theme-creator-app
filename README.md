@@ -41,6 +41,7 @@ A small app to explore and create different colors themes. Just create a new the
 -   Utilize `usePathname()` for enabling active state in navigation
 -   Make use of dynamic routes combined with `useParams()`
 -   How to utilize `next/font` for automatic font optimization
+-   Use `defaultValue` for uncontrolled input fields
 
 ## Feature ideas
 
