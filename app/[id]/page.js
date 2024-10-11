@@ -4,7 +4,6 @@ import "@/app/page.scss";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 import Color from "@/components/Color/Color";
-import Empty from "@/components/Empty/Empty";
 import Header from "@/components/Header/Header";
 import useThemeState from "@/states/useThemeState";
 import Headline from "@/components/Headline/Headline";
@@ -21,7 +20,11 @@ export default function Theme() {
 			<Header />
 			<main className="main">
 				<Headline themeId={id}>{name}</Headline>
-				<section className="colors">{colors.length === 0 ? <Empty /> : colors.map((color) => <Color key={color.id} themeId={id} colorId={color.id} role={color.role} color={color.hex} />)}</section>
+				<section className="colors">
+					{colors.map((color) => (
+						<Color key={color.id} themeId={id} colorId={color.id} length={colors.length} role={color.role} color={color.hex} />
+					))}
+				</section>
 			</main>
 		</>
 	);

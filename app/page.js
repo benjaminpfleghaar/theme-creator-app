@@ -14,7 +14,7 @@ export default function Home() {
 			<Header />
 			<main className="main">
 				<Headline>
-					{themes.length} Beautiful {themes.length > 1 ? "themes" : "theme"}
+					{themes.length} Beautiful {themes.length > 1 ? "Themes" : "Theme"}
 				</Headline>
 				<section className="themes">
 					{themes.map((theme) => (
