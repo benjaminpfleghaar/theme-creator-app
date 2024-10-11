@@ -1,17 +1,18 @@
 import Link from "next/link";
 import "@/components/Theme/Theme.scss";
 
-export default function Theme() {
+export default function Theme({ theme }) {
+	const { id, name, colors } = theme;
+
 	return (
 		<section className="theme">
-			<Link href="/default" title="View Default Theme" className="theme__link">
-				<div style={{ backgroundColor: "#003049" }}></div>
-				<div style={{ backgroundColor: "#d62828" }}></div>
-				<div style={{ backgroundColor: "#f77f00" }}></div>
-				<div style={{ backgroundColor: "#fcbf49" }}></div>
+			<Link href={id} title={`View ${id}`} className="theme__link">
+				{colors.map((color) => (
+					<div key={color.id} style={{ backgroundColor: color.hex }}></div>
+				))}
 			</Link>
 			<h4 className="theme__title">
-				Default Theme <small className="theme__title--details">8 Colors</small>
+				{name} <small className="theme__title--details">{colors.length} Colors</small>
 			</h4>
 		</section>
 	);

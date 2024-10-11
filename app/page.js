@@ -1,18 +1,23 @@
+"use client";
+
 import "@/app/page.scss";
 import Theme from "@/components/Theme/Theme";
 import Header from "@/components/Header/Header";
+import useThemeState from "@/states/useTicketState";
 import Headline from "@/components/Headline/Headline";
 
 export default function Home() {
+	const { themes } = useThemeState();
+
 	return (
 		<>
 			<Header />
 			<main className="main">
-				<Headline>3 Beautiful themes</Headline>
+				<Headline>{themes.length} Beautiful themes</Headline>
 				<section className="themes">
-					<Theme />
-					<Theme />
-					<Theme />
+					{themes.map((theme) => (
+						<Theme key={theme.id} theme={theme} />
+					))}
 				</section>
 			</main>
 		</>

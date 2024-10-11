@@ -1,17 +1,27 @@
+"use client";
+
 import "@/components/Header/Header.scss";
 import Link from "@/components/Link/Link";
+import { usePathname } from "next/navigation";
+import useThemeState from "@/states/useTicketState";
 
 export default function Header() {
+	const currentPath = usePathname();
+	const { themes } = useThemeState();
+	const isActive = (path) => path === currentPath;
+
 	return (
 		<header className="header">
 			<nav className="header__nav">
 				<ul className="header__nav-list">
 					<li>
-						<Link title="Home" target="/" active />
+						<Link title="Home" target="/" active={isActive("/")} />
 					</li>
-					<li>
-						<Link title="Default Theme" target="/" />
-					</li>
+					{themes.map((theme) => (
+						<li key={theme.id}>
+							<Link title={theme.name} target={`/${theme.id}`} active={isActive(`/${theme.id}`)} />
+						</li>
+					))}
 				</ul>
 			</nav>
 		</header>
