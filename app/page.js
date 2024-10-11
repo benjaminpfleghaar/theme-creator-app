@@ -13,7 +13,9 @@ export default function Home() {
 		<>
 			<Header />
 			<main className="main">
-				<Headline>{themes.length} Beautiful themes</Headline>
+				<Headline>
+					{themes.length} Beautiful {themes.length > 1 ? "themes" : "theme"}
+				</Headline>
 				<section className="themes">
 					{themes.map((theme) => (
 						<Theme key={theme.id} theme={theme} />

@@ -21,6 +21,7 @@
 	&__title {
 		display: flex;
 		flex-direction: column;
+		font-size: var(--font-size-m);
 
 		&--details {
 			color: var(--color-secondary);
