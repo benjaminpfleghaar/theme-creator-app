@@ -10,7 +10,7 @@
 
 	&--active {
 		color: var(--color-primary);
-		background-color: var(--color-background-bright);
+		background-color: var(--color-background);
 	}
 	&:focus-visible {
 		outline-offset: 2px;

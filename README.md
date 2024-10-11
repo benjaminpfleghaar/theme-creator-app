@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Theme Creator App
 
-## Getting Started
+Theme Creator app as part of the neuefische Web Development Bootcamp
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. [Description](#description)
+2. [Constraints](#constraints)
+3. [Challenges](#challenges)
+4. [Learnings](#learnings)
+5. [Feature ideas](#feature-ideas)
+6. [How to use](#how-to-use)
+7. [Dependencies](#dependencies)
+8. [Tech Stack](#tech-stack)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Description
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+A small app to explore and create different colors themes. Just create a new theme and start adding colors. Each theme and color can also be edited and deleted.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Constraints
 
-## Learn More
+-   Create a home and theme page
+-   Use global states for data handling
+-   Provide possibility to add/edit/delete a theme/color
+-   Ensure sufficient contrast between text/color
 
-To learn more about Next.js, take a look at the following resources:
+## Challenges
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [x] Handle dynamic routing
+-   [x] Slice components properly
+-   [x] Enable state management
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Learnings
 
-## Deploy on Vercel
+-   Import fonts with Next.js build in feature
+-   Using Zustand for centralizing state management
+-   Provide safe destructuring with logical OR `||` operator
+    -   `const { key } = object || {};`
+-   How to style `<input type="color">` elements with css
+-   Use `font: inherit;` and `color: inherit;` for input element reset
+-   Utilize `usePathname()` for enabling active state in navigation
+-   Make use of dynamic routes combined with `useParams()`
+-   How to utilize `next/font` for automatic font optimization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Feature ideas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   Make layout responsive
+-   Refactor theme delete functionality
+
+### Implemented
+
+-   Use singular/plural for headlines
+
+## How to use
+
+The application uses _Next.js_ as it's foundation.
+
+-   Clone the whole repository
+-   Run `npm install` in the app directory to install dependencies
+-   Run `npm run dev` to start the application
+
+## Dependencies
+
+-   uid
+-   next
+-   sass
+-   react
+-   zustand
+-   react-dom
+
+## Tech Stack
+
+-   VSC
+-   GitHub
+-   Next.js
+-   React
+-   SCSS
+-   HTML

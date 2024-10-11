@@ -10,13 +10,13 @@ export default function Headline({ children, themeId }) {
 	const [toggle, setToggle] = useState(false);
 	const { themes, addTheme, editTheme, deleteTheme, addColor } = useThemeState();
 
-	function handleSubmit(event) {
+	const handleSubmit = (event) => {
 		event.preventDefault();
 		const response = new FormData(event.target);
 		const { themeName } = Object.fromEntries(response);
 		editTheme(themeId, themeName);
 		setToggle(false);
-	}
+	};
 
 	if (themeId)
 		return (

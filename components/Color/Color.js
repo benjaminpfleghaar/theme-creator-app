@@ -12,12 +12,12 @@ export default function Color({ themeId, colorId, length, role, color }) {
 	const [toggle, setToggle] = useState(false);
 	const { editColor, deleteColor } = useThemeState();
 
-	function handleSubmit(event) {
+	const handleSubmit = (event) => {
 		event.preventDefault();
 		const response = new FormData(event.target);
 		const { role, hex } = Object.fromEntries(response);
 		editColor(themeId, colorId, role, hex);
-	}
+	};
 
 	return (
 		<section className="color" style={{ backgroundColor: color }}>
