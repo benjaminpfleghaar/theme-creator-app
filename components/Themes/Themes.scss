@@ -1,0 +1,10 @@
+.themes {
+	max-width: 640px;
+	margin: 144px auto 72px;
+
+	&__section {
+		gap: 40px;
+		display: flex;
+		flex-direction: column;
+	}
+}

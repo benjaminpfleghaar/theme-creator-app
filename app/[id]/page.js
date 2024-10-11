@@ -1,31 +1,17 @@
-"use client";
-
-import "@/app/page.scss";
-import { useRouter } from "next/navigation";
-import { useParams } from "next/navigation";
-import Color from "@/components/Color/Color";
+import Colors from "@/components/Colors/Colors";
 import Header from "@/components/Header/Header";
-import useThemeState from "@/states/useThemeState";
-import Headline from "@/components/Headline/Headline";
+
+export function generateMetadata({ params }) {
+	return {
+		title: "Theme: " + params.id,
+	};
+}
 
 export default function Theme() {
-	const { id } = useParams();
-	const router = useRouter();
-	const { themes } = useThemeState();
-	if (!themes.find((theme) => theme.id === id)) return router.push("/");
-	const { name, colors } = themes.find((theme) => theme.id === id);
-
 	return (
 		<>
 			<Header />
-			<main className="main">
-				<Headline themeId={id}>{name}</Headline>
-				<section className="colors">
-					{colors.map((color) => (
-						<Color key={color.id} themeId={id} colorId={color.id} length={colors.length} role={color.role} color={color.hex} />
-					))}
-				</section>
-			</main>
+			<Colors />
 		</>
 	);
 }
