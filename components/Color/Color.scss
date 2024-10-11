@@ -12,6 +12,12 @@
 		width: fit-content;
 		flex-direction: column;
 
+		&--black {
+			color: var(--color-primary);
+		}
+		&--white {
+			color: var(--color-white);
+		}
 		&--details {
 			font-size: var(--font-size-xs);
 		}

@@ -11,7 +11,7 @@ export default function Color({ role, color }) {
 
 	return (
 		<section className="color" style={{ backgroundColor: color }}>
-			<h4 className="color__title" style={{ color: getContrastColor(color) }} onClick={() => setToggle(!toggle)}>
+			<h4 className={`color__title ${getContrastColor(color)}`} onClick={() => setToggle(!toggle)}>
 				{role} <small className="color__title--details">{color.toUpperCase().slice(1)}</small>
 			</h4>
 			{toggle && (

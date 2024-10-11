@@ -9,7 +9,6 @@
 		outline: 2px solid var(--color-primary);
 	}
 }
-
 .button--primary {
 	padding: 0 16px;
 	font-weight: 600;
@@ -18,7 +17,6 @@
 	background-color: var(--color-white);
 	border: 1px solid var(--color-border);
 }
-
 .button--icon {
 	width: 40px;
 	background: var(--color-delete) url("/delete.svg") center no-repeat;
@@ -27,7 +25,6 @@
 		cursor: default;
 		background-color: var(--color-secondary);
 	}
-
 	.button__text--hidden {
 		top: auto;
 		width: 1px;
