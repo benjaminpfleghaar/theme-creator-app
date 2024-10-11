@@ -1,7 +1,7 @@
 "use client";
 
 import "@/components/Header/Header.scss";
-import Link from "@/components/Link/Link";
+import Tab from "@/components/Tab/Tab";
 import { usePathname } from "next/navigation";
 import useThemeState from "@/states/useThemeState";
 
@@ -15,11 +15,11 @@ export default function Header() {
 			<nav className="header__nav">
 				<ul className="header__nav-list">
 					<li>
-						<Link title="Home" target="/" active={isActive("/")} />
+						<Tab title="Home" target="/" active={isActive("/")} />
 					</li>
 					{themes.map((theme) => (
 						<li key={theme.id}>
-							<Link title={theme.name} target={`/${theme.id}`} active={isActive(`/${theme.id}`)} />
+							<Tab title={theme.name} target={`/${theme.id}`} active={isActive(`/${theme.id}`)} />
 						</li>
 					))}
 				</ul>
