@@ -11,23 +11,35 @@ const useThemeState = create((set) => ({
 					id: uid(),
 					name: "New Theme",
 					colors: [
-						{ id: "primary", role: "Primary", hex: "#f4f4f4" },
-						{ id: "secondary", role: "Secondary", hex: "#c6c6c6" },
-						{ id: "tertiary", role: "Tertiary", hex: "#8d8d8d" },
-						{ id: "highlight", role: "Highlight", hex: "#525252" },
-						{ id: "background", role: "Background", hex: "#262626" },
+						{ id: uid(), role: "Primary", hex: "#f4f4f4" },
+						{ id: uid(), role: "Secondary", hex: "#c6c6c6" },
+						{ id: uid(), role: "Tertiary", hex: "#8d8d8d" },
+						{ id: uid(), role: "Highlight", hex: "#525252" },
+						{ id: uid(), role: "Background", hex: "#262626" },
 					],
 				},
 				...state.themes,
 			],
 		})),
-	editTheme: (id, name) =>
+	editTheme: (themeId, name) =>
 		set((state) => ({
-			themes: state.themes.map((theme) => (theme.id === id ? { ...theme, name: name } : theme)),
+			themes: state.themes.map((theme) => (theme.id === themeId ? { ...theme, name: name } : theme)),
 		})),
-	deleteTheme: (id) =>
+	deleteTheme: (themeId) =>
 		set((state) => ({
-			themes: state.themes.filter((theme) => theme.id !== id),
+			themes: state.themes.filter((theme) => theme.id !== themeId),
+		})),
+	addColor: (themeId) =>
+		set((state) => ({
+			themes: state.themes.map((theme) => (theme.id === themeId ? { ...theme, colors: [{ id: uid(), role: "New Color", hex: "#f4f4f4" }, ...theme.colors] } : theme)),
+		})),
+	editColor: (themeId, colorId, role, hex) =>
+		set((state) => ({
+			themes: state.themes.map((theme) => (theme.id === themeId ? { ...theme, colors: theme.colors.map((color) => (color.id === colorId ? { ...color, role: role, hex: hex } : color)) } : theme)),
+		})),
+	deleteColor: (themeId, colorId) =>
+		set((state) => ({
+			themes: state.themes.map((theme) => (theme.id === themeId ? { ...theme, colors: theme.colors.filter((color) => color.id !== colorId) } : theme)),
 		})),
 }));
 

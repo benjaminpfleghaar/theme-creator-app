@@ -12,14 +12,19 @@ export default function Theme() {
 	const { id } = useParams();
 	const router = useRouter();
 	const { themes } = useThemeState();
-	const { name, colors } = themes.find((theme) => theme.id === id) || {};
+	if (!themes.find((theme) => theme.id === id)) return router.push("/");
+	const { name, colors } = themes.find((theme) => theme.id === id);
 
 	return (
 		<>
 			<Header />
 			<main className="main">
-				<Headline>{name}</Headline>
-				<section className="colors">{!name ? router.push("/") : colors.map((color) => <Color key={color.id} role={color.role} color={color.hex} />)}</section>
+				<Headline themeId={id}>{name}</Headline>
+				<section className="colors">
+					{colors.map((color) => (
+						<Color key={color.id} themeId={id} colorId={color.id} role={color.role} color={color.hex} />
+					))}
+				</section>
 			</main>
 		</>
 	);

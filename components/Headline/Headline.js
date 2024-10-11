@@ -1,36 +1,34 @@
 "use client";
 
 import { useState } from "react";
-import { useParams } from "next/navigation";
 import Input from "@/components/Input/Input";
 import "@/components/Headline/Headline.scss";
 import Button from "@/components/Button/Button";
 import useThemeState from "@/states/useThemeState";
 
-export default function Headline({ children }) {
+export default function Headline({ children, themeId }) {
 	const [toggle, setToggle] = useState(false);
-	const { addTheme, editTheme, deleteTheme } = useThemeState();
-	const { id } = useParams();
+	const { themes, addTheme, editTheme, deleteTheme, addColor } = useThemeState();
 
 	function handleSubmit(event) {
 		event.preventDefault();
 		const response = new FormData(event.target);
-		const { name } = Object.fromEntries(response);
-		editTheme(id, name);
+		const { themeName } = Object.fromEntries(response);
+		editTheme(themeId, themeName);
 		setToggle(false);
 	}
 
-	if (id)
+	if (themeId)
 		return (
 			<header className="headline">
 				{toggle ? (
 					<form className="headline__form" onSubmit={handleSubmit}>
-						<Input name="name" value={children} focus />
+						<Input name="themeName" value={children} focus />
 						<Button type="submit">Save</Button>
 						<Button type="button" onClick={() => setToggle(false)}>
 							Cancel
 						</Button>
-						<Button type="icon" onClick={() => deleteTheme(id)}>
+						<Button type="icon" onClick={() => deleteTheme(themeId)} disabled={themes.length < 2 ? true : false}>
 							Delete
 						</Button>
 					</form>
@@ -39,7 +37,9 @@ export default function Headline({ children }) {
 						{children}
 					</h1>
 				)}
-				<Button type="button">Add Color</Button>
+				<Button type="button" onClick={() => addColor(themeId)}>
+					Add Color
+				</Button>
 			</header>
 		);
 
