@@ -3,7 +3,7 @@
 import "@/components/Header/Header.scss";
 import Link from "@/components/Link/Link";
 import { usePathname } from "next/navigation";
-import useThemeState from "@/states/useTicketState";
+import useThemeState from "@/states/useThemeState";
 
 export default function Header() {
 	const currentPath = usePathname();

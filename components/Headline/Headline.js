@@ -5,22 +5,32 @@ import { useParams } from "next/navigation";
 import Input from "@/components/Input/Input";
 import "@/components/Headline/Headline.scss";
 import Button from "@/components/Button/Button";
+import useThemeState from "@/states/useThemeState";
 
 export default function Headline({ children }) {
 	const [toggle, setToggle] = useState(false);
+	const { addTheme, editTheme, deleteTheme } = useThemeState();
 	const { id } = useParams();
+
+	function handleSubmit(event) {
+		event.preventDefault();
+		const response = new FormData(event.target);
+		const { name } = Object.fromEntries(response);
+		editTheme(id, name);
+		setToggle(false);
+	}
 
 	if (id)
 		return (
 			<header className="headline">
 				{toggle ? (
-					<form className="headline__form">
+					<form className="headline__form" onSubmit={handleSubmit}>
 						<Input name="name" value={children} focus />
 						<Button type="submit">Save</Button>
 						<Button type="button" onClick={() => setToggle(false)}>
 							Cancel
 						</Button>
-						<Button type="icon" disabled>
+						<Button type="icon" onClick={() => deleteTheme(id)}>
 							Delete
 						</Button>
 					</form>
@@ -36,7 +46,9 @@ export default function Headline({ children }) {
 	return (
 		<header className="headline">
 			<h1 className="headline__title">{children}</h1>
-			<Button type="button">New Theme</Button>
+			<Button type="button" onClick={addTheme}>
+				New Theme
+			</Button>
 		</header>
 	);
 }

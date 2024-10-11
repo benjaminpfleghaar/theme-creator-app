@@ -3,7 +3,7 @@
 import "@/app/page.scss";
 import Theme from "@/components/Theme/Theme";
 import Header from "@/components/Header/Header";
-import useThemeState from "@/states/useTicketState";
+import useThemeState from "@/states/useThemeState";
 import Headline from "@/components/Headline/Headline";
 
 export default function Home() {
