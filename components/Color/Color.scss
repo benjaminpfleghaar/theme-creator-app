@@ -1,17 +1,15 @@
 .color {
 	height: 240px;
-	padding: 16px;
+	padding: 24px;
 	display: flex;
 	border-radius: 12px;
 	flex-direction: column;
 	justify-content: space-between;
 
-	&:hover:not(:has(.color__form:hover)) {
-		cursor: pointer;
-	}
-
 	&__title {
 		display: flex;
+		cursor: pointer;
+		width: fit-content;
 		flex-direction: column;
 
 		&--details {
