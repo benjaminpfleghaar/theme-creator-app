@@ -1,9 +1,7 @@
 import Link from "next/link";
 import "@/components/Themes/Theme/Theme.scss";
 
-export default function Theme({ theme }) {
-	const { id, name, colors } = theme;
-
+export default function Theme({ id, name, colors }) {
 	return (
 		<section className="theme">
 			<Link href={id} title={`View ${name}`} className="theme__link">

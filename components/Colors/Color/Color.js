@@ -7,7 +7,7 @@ import Input from "@/components/Global/Input/Input";
 import Button from "@/components/Global/Button/Button";
 import getContrastColor from "@/utils/getContrastColor";
 
-export default function Color({ themeId, colorId, length, role, hex }) {
+export default function Color({ themeId, colorId, colorLength, hex, role }) {
 	const [toggle, setToggle] = useState(false);
 	const { editColor, deleteColor } = useThemeState();
 
@@ -34,7 +34,7 @@ export default function Color({ themeId, colorId, length, role, hex }) {
 						<Button type="button" onClick={() => setToggle(false)}>
 							Close
 						</Button>
-						<Button type="icon" onClick={() => deleteColor(themeId, colorId)} disabled={length < 2 ? true : false}>
+						<Button type="icon" onClick={() => deleteColor(themeId, colorId)} disabled={colorLength < 2 ? true : false}>
 							Delete
 						</Button>
 					</section>

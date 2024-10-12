@@ -15,7 +15,7 @@ export default function Themes() {
 			</Header>
 			<section className="themes">
 				{themes.map((theme) => (
-					<Theme key={theme.id} theme={theme} />
+					<Theme key={theme.id} {...theme} />
 				))}
 			</section>
 		</main>

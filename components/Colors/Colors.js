@@ -16,7 +16,7 @@ export default function Colors() {
 
 	useEffect(() => {
 		if (!theme) router.replace("/");
-	}, [theme, router]);
+	}, [theme]);
 
 	if (!theme) return null;
 
@@ -27,7 +27,7 @@ export default function Colors() {
 			<Header themeId={id}>{name}</Header>
 			<section className="colors">
 				{colors.map((color) => (
-					<Color key={color.id} themeId={id} colorId={color.id} length={colors.length} role={color.role} hex={color.hex} />
+					<Color key={color.id} themeId={id} colorId={color.id} colorLength={colors.length} {...color} />
 				))}
 			</section>
 		</main>
