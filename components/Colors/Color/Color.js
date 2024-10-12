@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import "@/components/theme/Color/Color.scss";
-import Input from "@/components/global/Input/Input";
-import Button from "@/components/global/Button/Button";
+import "@/components/Colors/Color/Color.scss";
 import useThemeState from "@/states/useThemeState";
+import Input from "@/components/Global/Input/Input";
+import Button from "@/components/Global/Button/Button";
 import getContrastColor from "@/utils/getContrastColor";
 
 export default function Color({ themeId, colorId, length, role, hex }) {

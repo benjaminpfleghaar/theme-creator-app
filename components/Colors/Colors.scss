@@ -1,8 +1,8 @@
-.colors {
+.main {
 	max-width: 640px;
 	margin: 144px auto 72px;
 
-	&__section {
+	.colors {
 		gap: 16px;
 		display: flex;
 		flex-direction: column;

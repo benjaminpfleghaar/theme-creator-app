@@ -1,11 +1,11 @@
 "use client";
 
+import "@/components/Colors/Colors.scss";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
-import "@/components/theme/Colors/Colors.scss";
-import Color from "@/components/theme/Color/Color";
 import useThemeState from "@/states/useThemeState";
-import Headline from "@/components/theme/Headline/Headline";
+import Color from "@/components/Colors/Color/Color";
+import Header from "@/components/Colors/Header/Header";
 
 export default function Colors() {
 	const { id } = useParams();
@@ -16,9 +16,9 @@ export default function Colors() {
 	if (!name) return router.replace("/");
 
 	return (
-		<main className="colors">
-			<Headline themeId={id}>{name}</Headline>
-			<section className="colors__section">
+		<main className="main">
+			<Header themeId={id}>{name}</Header>
+			<section className="colors">
 				{colors.map((color) => (
 					<Color key={color.id} themeId={id} colorId={color.id} length={colors.length} role={color.role} hex={color.hex} />
 				))}

@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import Input from "@/components/global/Input/Input";
-import "@/components/theme/Headline/Headline.scss";
+import "@/components/Colors/Header/Header.scss";
+import Input from "@/components/Global/Input/Input";
 import useThemeState from "@/states/useThemeState";
-import Button from "@/components/global/Button/Button";
+import Button from "@/components/Global/Button/Button";
 
-export default function Headline({ children, themeId }) {
+export default function Header({ children, themeId }) {
 	const [toggle, setToggle] = useState(false);
 	const { themes, editTheme, deleteTheme, addColor } = useThemeState();
 
@@ -19,9 +19,9 @@ export default function Headline({ children, themeId }) {
 	};
 
 	return (
-		<header className="headline">
+		<header className="header">
 			{toggle ? (
-				<form className="headline__form" onSubmit={handleSubmit}>
+				<form className="header__form" onSubmit={handleSubmit}>
 					<Input name="themeName" value={children} focus />
 					<Button type="submit">Save</Button>
 					<Button type="button" onClick={() => setToggle(false)}>
@@ -32,7 +32,7 @@ export default function Headline({ children, themeId }) {
 					</Button>
 				</form>
 			) : (
-				<h1 className="headline__title headline__title--pointer" onClick={() => setToggle(true)}>
+				<h1 className="header__title header__title--pointer" onClick={() => setToggle(true)}>
 					{children}
 				</h1>
 			)}

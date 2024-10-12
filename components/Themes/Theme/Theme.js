@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "@/components/home/Theme/Theme.scss";
+import "@/components/Themes/Theme/Theme.scss";
 
 export default function Theme({ theme }) {
 	const { id, name, colors } = theme;

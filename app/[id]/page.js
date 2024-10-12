@@ -1,5 +1,5 @@
-import Colors from "@/components/theme/Colors/Colors";
-import Navigation from "@/components/global/Navigation/Navigation";
+import Colors from "@/components/Colors/Colors";
+import Navigation from "@/components/Global/Navigation/Navigation";
 
 export function generateMetadata({ params }) {
 	return {

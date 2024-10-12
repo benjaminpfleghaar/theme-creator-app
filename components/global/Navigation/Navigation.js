@@ -1,6 +1,6 @@
 "use client";
 
-import Tab from "@/components/global/Tab/Tab";
+import Tab from "@/components/Global/Tab/Tab";
 import { usePathname } from "next/navigation";
 import useThemeState from "@/states/useThemeState";
 import "@/components/global/Navigation/Navigation.scss";
@@ -11,9 +11,9 @@ export default function Navigation() {
 	const isActive = (path) => path === currentPath;
 
 	return (
-		<header className="header">
-			<nav className="header__nav">
-				<ul className="header__nav-list">
+		<header className="navigation">
+			<nav className="navigation__nav">
+				<ul className="navigation__nav-list">
 					<li>
 						<Tab title="Home" target="/" active={isActive("/")} />
 					</li>

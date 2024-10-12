@@ -1,8 +1,8 @@
-.themes {
+.main {
 	max-width: 640px;
 	margin: 144px auto 72px;
 
-	&__section {
+	.themes {
 		gap: 40px;
 		display: flex;
 		flex-direction: column;
