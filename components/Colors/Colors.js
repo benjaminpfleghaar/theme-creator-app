@@ -20,7 +20,7 @@ export default function Colors() {
 			<Headline themeId={id}>{name}</Headline>
 			<section className="colors__section">
 				{colors.map((color) => (
-					<Color key={color.id} themeId={id} colorId={color.id} length={colors.length} role={color.role} color={color.hex} />
+					<Color key={color.id} themeId={id} colorId={color.id} length={colors.length} role={color.role} hex={color.hex} />
 				))}
 			</section>
 		</main>

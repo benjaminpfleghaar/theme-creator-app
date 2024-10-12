@@ -7,8 +7,7 @@ import Button from "@/components/Button/Button";
 import useThemeState from "@/states/useThemeState";
 import getContrastColor from "@/utils/getContrastColor";
 
-export default function Color({ themeId, colorId, length, role, color }) {
-	const [hex, setHex] = useState(color);
+export default function Color({ themeId, colorId, length, role, hex }) {
 	const [toggle, setToggle] = useState(false);
 	const { editColor, deleteColor } = useThemeState();
 
@@ -20,16 +19,15 @@ export default function Color({ themeId, colorId, length, role, color }) {
 	};
 
 	return (
-		<section className="color" style={{ backgroundColor: color }}>
-			<h4 className={`color__title ${getContrastColor(color)}`} onClick={() => setToggle(!toggle)}>
-				{role} <small className="color__title--details">{color.toUpperCase().slice(1)}</small>
+		<section className="color" style={{ backgroundColor: hex }}>
+			<h4 className={`color__title ${getContrastColor(hex)}`} onClick={() => setToggle(!toggle)}>
+				{role} <small className="color__title--details">{hex.toUpperCase().slice(1)}</small>
 			</h4>
 			{toggle && (
 				<form className="color__form" onSubmit={handleSubmit}>
 					<section className="color__form-section">
 						<Input type="text" name="role" value={role} />
-						<Input type="text" name="hex" value={hex} onChange={(e) => setHex(e.target.value)} />
-						<Input type="color" value={hex} onChange={(e) => setHex(e.target.value)} />
+						<Input type="color" name="hex" value={hex} />
 					</section>
 					<section className="color__form-section">
 						<Button type="submit">Save</Button>

@@ -1,8 +1,16 @@
+import { useState } from "react";
 import "@/components/Input/Input.scss";
 
-export default function Input({ type, name, value, onChange, focus }) {
-	if (type === "color") return <input type="color" className="input input--color" value={value} onChange={onChange} />;
-	if (onChange) return <input type="text" name={name} className="input input--text" value={value} onChange={onChange} required />;
+export default function Input({ type, name, value, focus }) {
+	const [inputValue, setInputValue] = useState(value);
 
-	return <input type="text" name={name} className="input input--text" defaultValue={value} autoFocus={focus} required />;
+	if (type === "color")
+		return (
+			<>
+				<input type="text" name={name} className="input input--text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} required />
+				<input type="color" className="input input--color" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+			</>
+		);
+
+	return <input type="text" name={name} className="input input--text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} autoFocus={focus} required />;
 }
