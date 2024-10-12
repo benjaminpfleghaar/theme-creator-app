@@ -1,11 +1,11 @@
 "use client";
 
-import Tab from "@/components/Tab/Tab";
-import "@/components/Header/Header.scss";
+import Tab from "@/components/global/Tab/Tab";
 import { usePathname } from "next/navigation";
 import useThemeState from "@/states/useThemeState";
+import "@/components/global/Navigation/Navigation.scss";
 
-export default function Header() {
+export default function Navigation() {
 	const currentPath = usePathname();
 	const { themes } = useThemeState();
 	const isActive = (path) => path === currentPath;

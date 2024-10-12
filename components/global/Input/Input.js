@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "@/components/Input/Input.scss";
+import "@/components/global/Input/Input.scss";
 
 export default function Input({ type, name, value, focus }) {
 	const [inputValue, setInputValue] = useState(value);

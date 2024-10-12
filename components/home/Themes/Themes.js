@@ -1,9 +1,9 @@
 "use client";
 
-import "@/components/Themes/Themes.scss";
-import Theme from "@/components/Theme/Theme";
+import "@/components/home/Themes/Themes.scss";
+import Theme from "@/components/home/Theme/Theme";
 import useThemeState from "@/states/useThemeState";
-import Headline from "@/components/Headline/Headline";
+import Headline from "@/components/home/Headline/Headline";
 
 export default function Themes() {
 	const { themes } = useThemeState();

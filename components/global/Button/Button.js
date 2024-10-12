@@ -1,4 +1,4 @@
-import "@/components/Button/Button.scss";
+import "@/components/global/Button/Button.scss";
 
 export default function Button({ children, type, disabled, onClick }) {
 	if (type === "icon")

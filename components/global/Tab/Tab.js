@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "@/components/Tab/Tab.scss";
+import "@/components/global/Tab/Tab.scss";
 
 export default function Tab({ title, target, active }) {
 	return (

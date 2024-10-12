@@ -1,10 +1,10 @@
-import Themes from "@/components/Themes/Themes";
-import Header from "@/components/Header/Header";
+import Themes from "@/components/home/Themes/Themes";
+import Navigation from "@/components/global/Navigation/Navigation";
 
 export default function Home() {
 	return (
 		<>
-			<Header />
+			<Navigation />
 			<Themes />
 		</>
 	);

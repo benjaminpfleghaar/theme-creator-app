@@ -1,11 +1,11 @@
 "use client";
 
-import "@/components/Colors/Colors.scss";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
-import Color from "@/components/Color/Color";
+import "@/components/theme/Colors/Colors.scss";
+import Color from "@/components/theme/Color/Color";
 import useThemeState from "@/states/useThemeState";
-import Headline from "@/components/Headline/Headline";
+import Headline from "@/components/theme/Headline/Headline";
 
 export default function Colors() {
 	const { id } = useParams();

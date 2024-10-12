@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import "@/components/Color/Color.scss";
-import Input from "@/components/Input/Input";
-import Button from "@/components/Button/Button";
+import "@/components/theme/Color/Color.scss";
+import Input from "@/components/global/Input/Input";
+import Button from "@/components/global/Button/Button";
 import useThemeState from "@/states/useThemeState";
 import getContrastColor from "@/utils/getContrastColor";
 
