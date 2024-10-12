@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import "@/components/Colors/Colors.scss";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
@@ -11,9 +12,15 @@ export default function Colors() {
 	const { id } = useParams();
 	const router = useRouter();
 	const { themes } = useThemeState();
-	const { name, colors } = themes.find((theme) => theme.id === id) || {};
+	const theme = themes.find((theme) => theme.id === id);
 
-	if (!name) return router.replace("/");
+	useEffect(() => {
+		if (!theme) router.replace("/");
+	}, [theme, router]);
+
+	if (!theme) return null;
+
+	const { name, colors } = theme;
 
 	return (
 		<main className="main">
