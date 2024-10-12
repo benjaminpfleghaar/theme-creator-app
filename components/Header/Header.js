@@ -1,7 +1,7 @@
 "use client";
 
-import "@/components/Header/Header.scss";
 import Tab from "@/components/Tab/Tab";
+import "@/components/Header/Header.scss";
 import { usePathname } from "next/navigation";
 import useThemeState from "@/states/useThemeState";
 

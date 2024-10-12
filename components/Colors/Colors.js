@@ -13,7 +13,7 @@ export default function Colors() {
 	const { themes } = useThemeState();
 	const { name, colors } = themes.find((theme) => theme.id === id) || {};
 
-	if (!themes.find((theme) => theme.id === id)) return router.push("/");
+	if (!themes.find((theme) => theme.id === id)) return router.replace("/");
 
 	return (
 		<main className="colors">
