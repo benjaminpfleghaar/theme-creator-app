@@ -4,11 +4,11 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 import Color from "@/components/Color/Color";
-import "@/components/ColorList/ColorList.scss";
 import useThemeState from "@/states/useThemeState";
+import "@/components/ColorManager/ColorManager.scss";
 import ColorHeader from "@/components/ColorHeader/ColorHeader";
 
-export default function ColorList() {
+export default function ColorManager() {
 	const { id } = useParams();
 	const router = useRouter();
 	const { themes } = useThemeState();
@@ -23,9 +23,9 @@ export default function ColorList() {
 	const { name, colors } = theme;
 
 	return (
-		<main className="main">
+		<main className="color-manager">
 			<ColorHeader themeId={id}>{name}</ColorHeader>
-			<section className="colors">
+			<section className="color-section">
 				{colors.map((color) => (
 					<Color key={color.id} themeId={id} colorId={color.id} colorLength={colors.length} {...color} />
 				))}

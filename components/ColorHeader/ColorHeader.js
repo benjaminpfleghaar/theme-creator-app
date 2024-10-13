@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import Input from "@/components/Input/Input";
 import Button from "@/components/Button/Button";
@@ -19,9 +17,9 @@ export default function ColorHeader({ children, themeId }) {
 	};
 
 	return (
-		<header className="header">
+		<header className="color-header">
 			{toggle ? (
-				<form className="header__form" onSubmit={handleSubmit}>
+				<form className="color-header__form" onSubmit={handleSubmit}>
 					<Input name="themeName" value={children} focus />
 					<Button type="submit">Save</Button>
 					<Button type="button" onClick={() => setToggle(false)}>
@@ -32,7 +30,7 @@ export default function ColorHeader({ children, themeId }) {
 					</Button>
 				</form>
 			) : (
-				<h1 className="header__title header__title--pointer" onClick={() => setToggle(true)}>
+				<h1 className="color-header__title color-header__title--pointer" onClick={() => setToggle(true)}>
 					{children}
 				</h1>
 			)}

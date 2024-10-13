@@ -11,7 +11,7 @@ export default function Theme({ id, name, colors }) {
 			</Link>
 			<h2 className="theme__title">
 				{name}
-				<small className="theme__title--details">
+				<small className="theme__title--count">
 					{colors.length} {colors.length > 1 ? "Colors" : "Color"}
 				</small>
 			</h2>

@@ -1,4 +1,4 @@
-.header {
+.theme-header {
 	display: flex;
 	margin-bottom: 72px;
 	align-items: center;
@@ -11,9 +11,5 @@
 		&--pointer {
 			cursor: pointer;
 		}
-	}
-	&__form {
-		gap: 8px;
-		display: flex;
 	}
 }

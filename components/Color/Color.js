@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import "@/components/Color/Color.scss";
 import Input from "@/components/Input/Input";
@@ -21,7 +19,7 @@ export default function Color({ themeId, colorId, colorLength, hex, role }) {
 	return (
 		<section className="color" style={{ backgroundColor: hex }}>
 			<h4 className={`color__title ${getContrastColor(hex)}`} onClick={() => setToggle(!toggle)}>
-				{role} <small className="color__title--details">{hex.toUpperCase().slice(1)}</small>
+				{role} <small className="color__title--hex">{hex.toUpperCase().slice(1)}</small>
 			</h4>
 			{toggle && (
 				<form className="color__form" onSubmit={handleSubmit}>
