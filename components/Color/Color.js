@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import "@/components/Colors/Color/Color.scss";
+import "@/components/Color/Color.scss";
+import Input from "@/components/Input/Input";
+import Button from "@/components/Button/Button";
+import { getContrastColor } from "@/libs/utils";
 import useThemeState from "@/states/useThemeState";
-import Input from "@/components/Global/Input/Input";
-import Button from "@/components/Global/Button/Button";
-import getContrastColor from "@/utils/getContrastColor";
 
 export default function Color({ themeId, colorId, colorLength, hex, role }) {
 	const [toggle, setToggle] = useState(false);

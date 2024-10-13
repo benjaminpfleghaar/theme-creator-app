@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
-import "@/components/Colors/Colors.scss";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
+import Color from "@/components/Color/Color";
+import "@/components/ColorList/ColorList.scss";
 import useThemeState from "@/states/useThemeState";
-import Color from "@/components/Colors/Color/Color";
-import Header from "@/components/Colors/Header/Header";
+import ColorHeader from "@/components/ColorHeader/ColorHeader";
 
-export default function Colors() {
+export default function ColorList() {
 	const { id } = useParams();
 	const router = useRouter();
 	const { themes } = useThemeState();
@@ -24,7 +24,7 @@ export default function Colors() {
 
 	return (
 		<main className="main">
-			<Header themeId={id}>{name}</Header>
+			<ColorHeader themeId={id}>{name}</ColorHeader>
 			<section className="colors">
 				{colors.map((color) => (
 					<Color key={color.id} themeId={id} colorId={color.id} colorLength={colors.length} {...color} />

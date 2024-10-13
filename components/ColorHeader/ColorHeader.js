@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import "@/components/Colors/Header/Header.scss";
-import Input from "@/components/Global/Input/Input";
+import Input from "@/components/Input/Input";
+import Button from "@/components/Button/Button";
 import useThemeState from "@/states/useThemeState";
-import Button from "@/components/Global/Button/Button";
+import "@/components/ColorHeader/ColorHeader.scss";
 
-export default function Header({ children, themeId }) {
+export default function ColorHeader({ children, themeId }) {
 	const [toggle, setToggle] = useState(false);
 	const { themes, editTheme, deleteTheme, addColor } = useThemeState();
 

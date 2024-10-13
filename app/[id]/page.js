@@ -1,5 +1,5 @@
-import Colors from "@/components/Colors/Colors";
-import Navigation from "@/components/Global/Navigation/Navigation";
+import ColorList from "@/components/ColorList/ColorList";
+import Navigation from "@/components/Navigation/Navigation";
 
 export function generateMetadata({ params }) {
 	return {
@@ -11,7 +11,7 @@ export default function Theme() {
 	return (
 		<>
 			<Navigation />
-			<Colors />
+			<ColorList />
 		</>
 	);
 }

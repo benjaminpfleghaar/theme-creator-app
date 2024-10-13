@@ -1,6 +1,6 @@
 import { uid } from "uid";
 import { create } from "zustand";
-import { themes } from "@/lib/themes";
+import { themes } from "@/libs/themes";
 
 const useThemeState = create((set) => ({
 	themes: themes,

@@ -1,9 +1,9 @@
 "use client";
 
-import Tab from "@/components/Global/Tab/Tab";
+import Tab from "@/components/Tab/Tab";
 import { usePathname } from "next/navigation";
+import "@/components/Navigation/Navigation.scss";
 import useThemeState from "@/states/useThemeState";
-import "@/components/global/Navigation/Navigation.scss";
 
 export default function Navigation() {
 	const currentPath = usePathname();

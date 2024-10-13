@@ -1,10 +1,10 @@
 "use client";
 
-import "@/components/Themes/Header/Header.scss";
+import Button from "@/components/Button/Button";
 import useThemeState from "@/states/useThemeState";
-import Button from "@/components/Global/Button/Button";
+import "@/components/ThemeHeader/ThemeHeader.scss";
 
-export default function Header({ children }) {
+export default function ThemeHeader({ children }) {
 	const { addTheme } = useThemeState();
 
 	return (

@@ -1,18 +1,18 @@
 "use client";
 
-import "@/components/Themes/Themes.scss";
+import Theme from "@/components/Theme/Theme";
+import "@/components/ThemeList/ThemeList.scss";
 import useThemeState from "@/states/useThemeState";
-import Theme from "@/components/Themes/Theme/Theme";
-import Header from "@/components/Themes/Header/Header";
+import ThemeHeader from "@/components/ThemeHeader/ThemeHeader";
 
-export default function Themes() {
+export default function ThemeList() {
 	const { themes } = useThemeState();
 
 	return (
 		<main className="main">
-			<Header>
+			<ThemeHeader>
 				{themes.length} Beautiful {themes.length > 1 ? "Themes" : "Theme"}
-			</Header>
+			</ThemeHeader>
 			<section className="themes">
 				{themes.map((theme) => (
 					<Theme key={theme.id} {...theme} />

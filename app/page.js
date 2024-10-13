@@ -1,11 +1,11 @@
-import Themes from "@/components/Themes/Themes";
-import Navigation from "@/components/Global/Navigation/Navigation";
+import ThemeList from "@/components/ThemeList/ThemeList";
+import Navigation from "@/components/Navigation/Navigation";
 
 export default function Home() {
 	return (
 		<>
 			<Navigation />
-			<Themes />
+			<ThemeList />
 		</>
 	);
 }

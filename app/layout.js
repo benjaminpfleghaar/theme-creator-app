@@ -1,10 +1,5 @@
 import "@/styles/globals.scss";
-import { DM_Sans } from "next/font/google";
-
-const dm_sans = DM_Sans({
-	weight: ["400", "600"],
-	subsets: ["latin"],
-});
+import { dm_sans } from "@/libs/fonts";
 
 export const metadata = {
 	title: "Theme Creator",
