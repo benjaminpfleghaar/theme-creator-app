@@ -15,7 +15,7 @@ Theme Creator app as part of the neuefische Web Development Bootcamp
 
 ## Description
 
-A small app to explore and create different colors themes. Just create a new theme and start adding colors. Each theme and color can also be edited and deleted.
+A small app to explore and create different colors and themes. Just create a new theme and start adding colors. Each theme and color can also be edited and deleted.
 
 ## Constraints
 
