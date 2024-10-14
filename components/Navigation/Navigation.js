@@ -16,6 +16,9 @@ export default function Navigation() {
 					<Image src="/images/logo.svg" width={40} height={40} alt="Theme Creator" />
 				</Link>
 				<ul className="navigation__nav-list">
+					<li>
+						<Tab title="Home" href="/" />
+					</li>
 					{themes.map((theme) => (
 						<li key={theme.id}>
 							<Tab title={theme.name} href={`/${theme.id}`} />
