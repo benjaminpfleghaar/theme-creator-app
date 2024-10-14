@@ -19,7 +19,7 @@
 }
 .button--icon {
 	width: 40px;
-	background: var(--color-delete) url("/delete.svg") center no-repeat;
+	background: var(--color-delete) url("/images/delete.svg") center no-repeat;
 
 	&:disabled {
 		cursor: default;

@@ -1,5 +1,5 @@
 import "@/styles/globals.scss";
-import { dm_sans } from "@/libs/fonts";
+import { geist } from "@/libs/fonts";
 
 export const metadata = {
 	title: "Theme Creator",
@@ -9,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={dm_sans.className}>{children}</body>
+			<body className={geist.className}>{children}</body>
 		</html>
 	);
 }

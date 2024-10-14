@@ -1,6 +1,14 @@
-import { DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 
-export const dm_sans = DM_Sans({
-	weight: ["400", "600"],
-	subsets: ["latin"],
+export const geist = localFont({
+	src: [
+		{
+			path: "../public/fonts/Geist-Regular.ttf",
+			weight: "400",
+		},
+		{
+			path: "../public/fonts/Geist-Medium.ttf",
+			weight: "600",
+		},
+	],
 });
