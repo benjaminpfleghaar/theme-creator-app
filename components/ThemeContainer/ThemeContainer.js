@@ -1,15 +1,15 @@
 "use client";
 
 import Theme from "@/components/Theme/Theme";
-import useThemeState from "@/states/useThemeState";
-import "@/components/ThemeManager/ThemeManager.scss";
+import { useThemeState } from "@/libs/states";
+import "@/components/ThemeContainer/ThemeContainer.scss";
 import ThemeHeader from "@/components/ThemeHeader/ThemeHeader";
 
-export default function ThemeManager() {
+export default function ThemeContainer() {
 	const { themes } = useThemeState();
 
 	return (
-		<main className="theme-manager">
+		<main className="theme-container">
 			<ThemeHeader>
 				{themes.length} Beautiful {themes.length > 1 ? "Themes" : "Theme"}
 			</ThemeHeader>

@@ -2,7 +2,7 @@ import { uid } from "uid";
 import { create } from "zustand";
 import { themes } from "@/libs/themes";
 
-const useThemeState = create((set) => ({
+export const useThemeState = create((set) => ({
 	themes: themes,
 	addTheme: () =>
 		set((state) => ({
@@ -42,5 +42,3 @@ const useThemeState = create((set) => ({
 			themes: state.themes.map((theme) => (theme.id === themeId ? { ...theme, colors: theme.colors.filter((color) => color.id !== colorId) } : theme)),
 		})),
 }));
-
-export default useThemeState;

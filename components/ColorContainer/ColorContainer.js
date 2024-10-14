@@ -4,11 +4,11 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 import Color from "@/components/Color/Color";
-import useThemeState from "@/states/useThemeState";
-import "@/components/ColorManager/ColorManager.scss";
+import { useThemeState } from "@/libs/states";
+import "@/components/ColorContainer/ColorContainer.scss";
 import ColorHeader from "@/components/ColorHeader/ColorHeader";
 
-export default function ColorManager() {
+export default function ColorContainer() {
 	const { id } = useParams();
 	const router = useRouter();
 	const { themes } = useThemeState();
@@ -23,7 +23,7 @@ export default function ColorManager() {
 	const { name, colors } = theme;
 
 	return (
-		<main className="color-manager">
+		<main className="color-container">
 			<ColorHeader themeId={id}>{name}</ColorHeader>
 			<section className="color-section">
 				{colors.map((color) => (

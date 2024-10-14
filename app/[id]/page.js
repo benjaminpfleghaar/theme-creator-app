@@ -1,5 +1,5 @@
 import Navigation from "@/components/Navigation/Navigation";
-import ColorManager from "@/components/ColorManager/ColorManager";
+import ColorContainer from "@/components/ColorContainer/ColorContainer";
 
 export function generateMetadata({ params }) {
 	return {
@@ -11,7 +11,7 @@ export default function Theme() {
 	return (
 		<>
 			<Navigation />
-			<ColorManager />
+			<ColorContainer />
 		</>
 	);
 }

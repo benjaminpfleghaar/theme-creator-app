@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "@/components/Color/Color.scss";
 import Input from "@/components/Input/Input";
+import { useThemeState } from "@/libs/states";
 import Button from "@/components/Button/Button";
 import { getContrastColor } from "@/libs/utils";
-import useThemeState from "@/states/useThemeState";
 
 export default function Color({ themeId, colorId, colorLength, hex, role }) {
 	const [toggle, setToggle] = useState(false);

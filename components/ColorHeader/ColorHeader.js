@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Input from "@/components/Input/Input";
+import { useThemeState } from "@/libs/states";
 import Button from "@/components/Button/Button";
-import useThemeState from "@/states/useThemeState";
 import "@/components/ColorHeader/ColorHeader.scss";
 
 export default function ColorHeader({ children, themeId }) {

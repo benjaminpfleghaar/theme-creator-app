@@ -1,11 +1,11 @@
 import Navigation from "@/components/Navigation/Navigation";
-import ThemeManager from "@/components/ThemeManager/ThemeManager";
+import ThemeContainer from "@/components/ThemeContainer/ThemeContainer";
 
 export default function Home() {
 	return (
 		<>
 			<Navigation />
-			<ThemeManager />
+			<ThemeContainer />
 		</>
 	);
 }

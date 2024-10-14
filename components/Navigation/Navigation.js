@@ -1,8 +1,8 @@
 "use client";
 
 import Tab from "@/components/Tab/Tab";
+import { useThemeState } from "@/libs/states";
 import "@/components/Navigation/Navigation.scss";
-import useThemeState from "@/states/useThemeState";
 
 export default function Navigation() {
 	const { themes } = useThemeState();

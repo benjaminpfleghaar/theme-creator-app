@@ -1,5 +1,5 @@
+import { useThemeState } from "@/libs/states";
 import Button from "@/components/Button/Button";
-import useThemeState from "@/states/useThemeState";
 import "@/components/ThemeHeader/ThemeHeader.scss";
 
 export default function ThemeHeader({ children }) {
