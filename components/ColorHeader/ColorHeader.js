@@ -30,7 +30,7 @@ export default function ColorHeader({ children, themeId }) {
 					</Button>
 				</form>
 			) : (
-				<h1 className="color-header__title color-header__title--pointer" onClick={() => setToggle(true)}>
+				<h1 className="color-header__title" onClick={() => setToggle(true)}>
 					{children}
 				</h1>
 			)}

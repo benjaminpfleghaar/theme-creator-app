@@ -5,12 +5,9 @@
 	justify-content: space-between;
 
 	&__title {
+		cursor: pointer;
 		font-weight: 600;
 		font-size: var(--font-size-l);
-
-		&--pointer {
-			cursor: pointer;
-		}
 	}
 	&__form {
 		gap: 8px;
